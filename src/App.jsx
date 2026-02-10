@@ -9,6 +9,7 @@ import Explore from "./pages/Browse.jsx";
 import AuthPage from "./pages/AuthPage.jsx";
 import SellerSignup from "./pages/SellerSignupPage.jsx";
 import SellerDashboard from "./pages/SellerDashboard.jsx";
+import PageNotFound from "./pages/PageNotFound.jsx";
 
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
         <Route path="/auth" element={<AuthPage />} /> 
         <Route path="/seller-signup" element={<SellerSignup />} />
         <Route path="/seller-dashboard" element={<SellerDashboard />} />
-        <Route path="*" element={<h2 style={{ padding: 100, textAlign: "center" }}>Page Not Found</h2>} />
+        <Route path="/page-not-found" element={<PageNotFound />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       {!isLandingPage && <Footer />}
     </>
