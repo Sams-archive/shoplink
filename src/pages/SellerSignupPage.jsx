@@ -26,8 +26,8 @@ const SellerSignup = () => {
      <LandingNav 
   delay={0.5} 
   links={[
-    { label: "Why Sell?", path: "/seller-info" },
-    { label: "Support", path: "/help" }
+    { label: "Why Sell?", path: "/how-it-works" },
+    { label: "Support", path: "/features" }
   ]} 
   buttonText="Back to Home" 
   buttonPath="/"

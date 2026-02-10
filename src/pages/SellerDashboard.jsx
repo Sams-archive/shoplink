@@ -85,7 +85,7 @@ const SellerDashboard = () => {
         delay={0} 
         links={[{ label: "Storefront", path: "/explore" }]} 
         buttonText="Log Out" 
-        buttonPath="/" 
+        buttonPath="/explore" 
       />
 
       <div className="dashboard-container">

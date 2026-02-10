@@ -77,7 +77,7 @@ const Features = () => {
       </div>
 
       <div className="features-cta">
-        <button className="btn-primary" onClick={() => window.location.href = "/get-started"}>
+        <button className="btn-primary" onClick={() => window.location.href = "/seller-signup"}>
           Create your ShopLink
         </button>
       </div>

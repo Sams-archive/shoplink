@@ -42,11 +42,11 @@ const AuthPage = () => {
     if (isLogin) {
       console.log("Logging in with:", formData);
       // TODO: call your login API here
-      navigate("/dashboard"); // redirect after login
+      navigate("/seller-dashboard"); // redirect after login
     } else {
       console.log("Signing up with:", formData);
       // TODO: call your signup API here
-      navigate("/welcome"); // redirect after signup
+      navigate("/seller-dashboard"); // redirect after signup
     }
   };
 
