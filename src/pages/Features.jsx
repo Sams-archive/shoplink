@@ -37,55 +37,59 @@ const features = [
 const Features = () => {
   const navigate = useNavigate();
   return (
-    <div>
-   <LandingNav 
-  delay={0.5} 
-  links={[
-    { label: "Features", path: "/features" },
-    { label: "How it works", path: "/how-it-works" }
-  ]} 
-  buttonText="Back to Home" 
-  buttonPath="/"
-/>
-    <div className="features-page">
-      
+    <div className="min-h-screen bg-white">
+      {/* Navbar */}
+      <LandingNav 
+        delay={0.5} 
+        links={[
+          { label: "Features", path: "/features" },
+          { label: "How it works", path: "/how-it-works" }
+        ]} 
+        buttonText="Back to Home" 
+        buttonPath="/"
+      />
+
+      {/* Page Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="features-header"
+        className="max-w-4xl mx-auto text-center px-4 py-16 sm:py-20"
       >
-        <h1>Everything you need to sell on WhatsApp🔥</h1>
-        <p>
+        <h1 className="text-3xl sm:text-4xl font-bold mb-4">
+          Everything you need to sell on WhatsApp 🔥
+        </h1>
+        <p className="text-gray-600 text-lg sm:text-xl">
           One link that shows all your products — no daily posting required.
         </p>
       </motion.div>
 
-      <div className="features-grid">
+      {/* Features Grid */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 py-10">
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="feature-card"
+            className="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
           >
-            <h3 className="feature-card-title">{feature.title}</h3>
-            <p>{feature.text}</p>
+            <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+            <p className="text-gray-600 text-sm">{feature.text}</p>
           </motion.div>
         ))}
       </div>
 
-      <div className="features-cta">
-        <button className="btn-primary" onClick={() => window.location.href = "/seller-signup"}>
+      {/* Call to Action */}
+      <div className="text-center py-16">
+        <button
+          onClick={() => navigate("/seller-signup")}
+          className="btn-primary px-6 py-3 rounded-lg font-semibold hover:scale-105 transition transform"
+        >
           Create your ShopLink
         </button>
       </div>
     </div>
-
-
-    </div>
-    
   );
 };
 
